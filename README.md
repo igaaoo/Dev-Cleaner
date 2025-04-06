@@ -63,9 +63,6 @@ Windows PowerShell 5.1 or newer
 Permissions to delete folders in the scanned directories
 
 📄 Example Output
-markdown
-Copiar
-Editar
 Project cleanup started.
 Target folders:
    -> node_modules
