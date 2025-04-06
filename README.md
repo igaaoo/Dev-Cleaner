@@ -4,7 +4,7 @@ Dev-Cleaner is a lightweight PowerShell-based tool designed to free up disk spac
 
 No setup required. Just run the script or use the bundled .exe.
 
-🚀 Overview
+## 🚀 Overview
 Modern JavaScript projects generate large folder structures during development and builds. This tool helps you:
 
 Reclaim disk space
@@ -13,7 +13,7 @@ Keep your projects tidy
 
 Avoid clutter in old or unused folders
 
-✨ Features
+## ✨ Features
 🔍 Recursive folder search for:
 
 node_modules
@@ -42,7 +42,7 @@ Space freed
 
 Paths affected
 
-🧪 Usage
+## 🧪 Usage
 Option 1: Using PowerShell script
 Open PowerShell
 
@@ -57,7 +57,7 @@ It will scan and guide you through the cleanup
 
 ✅ No installation required!
 
-📦 Requirements (for script version)
+## 📦 Requirements (for script version)
 Windows PowerShell 5.1 or newer
 
 Permissions to delete folders in the scanned directories
@@ -80,18 +80,12 @@ Searching for folders to delete...
 [DEL] C:\Projects\archive\dist — 22.4 MB  
 
 Cleanup Summary
------------------------------
+-
 Total time: 00:00:15
 Folders deleted: 2
 Freed space: 175.6 MB
------------------------------
+-
 🛠️ Customization
-You can change:
-
-Which folders it looks for
-
-The number of days to consider a project "recent"
-
 Language settings (auto-detected)
 
 🤝 Contributing
