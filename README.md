@@ -62,7 +62,7 @@ Windows PowerShell 5.1 or newer
 
 Permissions to delete folders in the scanned directories
 
-📄 Example Output
+## 📄 Example Output
 Project cleanup started.
 Target folders:
    -> node_modules
