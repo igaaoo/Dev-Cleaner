@@ -77,15 +77,14 @@ Searching for folders to delete...
 [DEL] C:\Projects\archive\dist — 22.4 MB  
 
 Cleanup Summary
--
 Total time: 00:00:15
 Folders deleted: 2
 Freed space: 175.6 MB
--
-🛠️ Customization
+
+## 🛠️ Customization
 Language settings (auto-detected)
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to open issues, suggest improvements, or submit pull requests. Contributions are welcome!
 
 👤 Author
