@@ -14,7 +14,7 @@ function BuscarPastasAlvo {
         [string[]]$nomesAlvo
     )
 
-    $resultado = @()
+    $resultado = New-Object System.Collections.ArrayList
 
     function ScanFolder {
         param (
@@ -23,7 +23,7 @@ function BuscarPastasAlvo {
 
         foreach ($subdir in $pasta.GetDirectories()) {
             if ($nomesAlvo -contains $subdir.Name) {
-                $resultado += $subdir
+                [void]$resultado.Add($subdir)
                 continue
             }
             ScanFolder -pasta $subdir
@@ -63,7 +63,16 @@ function FiltrarPastasValidas {
 # Início
 $inicio = Get-Date
 $rootFolder = Get-Location
-$pastasParaDeletar = @("node_modules", ".next", "dist", "build", "coverage")
+$pastasParaDeletar = @(
+    "node_modules",
+    ".next",
+    "dist",
+    "build",
+    "coverage",
+    ".cache",
+    ".turbo",
+    ".output"
+)
 $dataLimite = (Get-Date).AddDays(-7)
 
 $pastasApagadas = @()
@@ -72,11 +81,11 @@ $contadorTotal = 0
 
 # Logo
 Write-Host @"
-  __  ____                ____ _                                 ____  
- / / |  _ \  _____   __  / ___| | ___  __ _ _ __   ___ _ __     / /\ \ 
+  __  ____                ____ _                                 ____
+ / / |  _ \  _____   __  / ___| | ___  __ _ _ __   ___ _ __     / /\ \
 / /  | | | |/ _ \ \ / / | |   | |/ _ \/ _` | '_ \ / _ \ '__|   / /  \ \
-\ \  | |_| |  __/\ V /  | |___| |  __/ (_| | | | |  __/ |     / /   / / 
- \_\ |____/ \___| \_/    \____|_|\___|\__,_|_| |_|\___|_|    /_/   /_/  
+\ \  | |_| |  __/\ V /  | |___| |  __/ (_| | | | |  __/ |     / /   / /
+ \_\ |____/ \___| \_/    \____|_|\___|\__,_|_| |_|\___|_|    /_/   /_/
 "@ -ForegroundColor Cyan
 
 Write-Host ""
